@@ -21,11 +21,11 @@ This project will be implemented with the following technologies:
 
 ### Main files
 In addition to the webpack entry file and an image file containing sprite images, there will be five scripts involved in this project:
-`game.js`: this will handle the game logic and the main structure of the canvas
-`board.js`: responsible for rendering the the board
-`player.js`: takes input from user and adjusts the position of the pig accordingly
-`obstacle.js`: handles individual obstacles
-`scoreboard.js`: fetches top 10 scores from local state
+* `game.js`: this will handle the game logic and the main structure of the canvas
+* `board.js`: responsible for rendering the the board
+* `player.js`: takes input from user and adjusts the position of the pig accordingly
+* `obstacle.js`: handles individual obstacles
+* `scoreboard.js`: fetches top 10 scores from local state
 
 ### Development Timeline
 #### Day 1 (2/6/19)
