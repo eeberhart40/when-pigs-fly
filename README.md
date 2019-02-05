@@ -9,4 +9,29 @@ In `When Pigs Fly` users will be able to:
 - [x] toggle the sound on and off
 - [x] enter initials if they acheive a top ten score
 
+###Wireframes
+This app will consist of a single screen with the simulation canvas and nav links to the Github and my Repo. The toggle music will be on the left and the tops scores menue will be on the right.
 ![WireFrame](https://github.com/eeberhart40/when-pigs-fly/blob/master/when%20pigs%20fly%20wire%20frame.png)
+
+###Architecture and Technologies
+This project will be implemented with the following technologies:
+* `Vanilla JavaScript` for overall structure and game logic
+* `HTML5 Canvas` for DOM manipulation and rendering
+* `Webpack` to bundle and serve up the scripts
+
+###Main files
+In addition to the webpack entry file, there will be five scripts involved in this projet:
+`game.js`: this will handle the game logic and the main structure of the canvas
+`board.js`: responsible for rendering the the board
+`player.js`: takes input from user and adjusts the position of the pig accordingly
+`obstacle.js`: handles individual obstacles
+`scoreboard.js`: fetches top 10 scores from local state
+
+###Development Timeline
+####Day 1 (2/6/19)
+
+####Day 2
+
+####Day 3
+
+####Weekend
