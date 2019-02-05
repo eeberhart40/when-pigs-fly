@@ -9,4 +9,4 @@ In `When Pigs Fly` users will be able to:
 - [x] toggle the sound on and off
 - [x] enter initials if they acheive a top ten score
 
-![WireFrame] (./when%20pigs%20fly%20wire%20frame.png)
+![WireFrame] (/when%20pigs%20fly%20wire%20frame.png)
