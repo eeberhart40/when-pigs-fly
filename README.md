@@ -47,5 +47,6 @@ In addition to the webpack entry file and an image file containing sprite images
 #### Weekend
 * add music
 * add music toggle
+* add sound for collision
 * debug
-* style
+* polish
