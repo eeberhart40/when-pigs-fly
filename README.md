@@ -37,6 +37,7 @@ In addition to the webpack entry file and an image file containing sprite images
 #### Day 2
  * write logic for pig flight
  * achieve user manipulation
+ * write points logic
 
 #### Day 3
 * write logic for obstacles
