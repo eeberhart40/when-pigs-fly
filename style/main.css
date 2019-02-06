@@ -2,4 +2,23 @@ html {
     background-image: url('https://image.freepik.com/free-vector/farm-with-barn_1196-526.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+}
+
+#canvas {
+    /* background-image: url('http://www.clker.com/cliparts/6/e/a/f/15137509091640585729cartoon-field-background.hi.png');
+    background-size: cover; */
+    width: 500px;
+    height: 600px;
+    padding: 0px;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    opacity: 1.0;
+    border: 5px solid #fded00;
 }
