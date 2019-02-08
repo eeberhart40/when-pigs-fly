@@ -86,14 +86,36 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/board.js":
+/*!**********************!*\
+  !*** ./src/board.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const Pig = __webpack_require__(/*! ./pig */ \"./src/pig.js\")\n\nclass Board {\n    // contructor(pig, obstacles){\n\n    // }\n\n    render () {\n        const bgImg = new Image();\n        bgImg.src = 'http://www.clker.com/cliparts/6/e/a/f/15137509091640585729cartoon-field-background.hi.png';\n        \n        const bgCan = document.getElementById('bgCanvas');\n        bgCan.width = 500;\n        bgCan.height = 450;\n        const bgCtx= bgCan.getContext('2d');\n        let bgImgWidth = bgCan.width;\n\n        let scrollSpeed = -.5;\n\n        const pig = new Pig();\n        \n        function loop() {\n\n            pig.render();\n            pig.update();\n\n            bgCtx.drawImage(bgImg, bgImgWidth, 0, bgCan.width, bgCan.height );\n            bgCtx.drawImage(bgImg, bgImgWidth - bgCan.width, 0, bgCan.width, bgCan.height);\n\n            bgImgWidth += scrollSpeed;\n\n            if(bgImgWidth == 0) bgImgWidth = bgCan.width;\n\n            window.requestAnimationFrame(loop);\n        }\n\n        loop();\n    }\n}\n\nmodule.exports = Board;\n\n//# sourceURL=webpack:///./src/board.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nconst Board = __webpack_require__(/*! ./board */ \"./src/board.js\");\n\nlet board = new Board();\n\nboard.render();\n\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/pig.js":
+/*!********************!*\
+  !*** ./src/pig.js ***!
+  \********************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\nconst can0 = document.getElementById('canvas0');\nconst can1 = document.getElementById('canvas1');\n\nlet ctx0 = can0.getContext('2d');\ncan0.width = 500;\ncan0.height = 450;\n\nlet ctx1 = can1.getContext('2d');\ncan1.width = 500;\ncan1.height = 450;\n\n\nlet img = new Image();\nimg.src = 'http://www.clker.com/cliparts/6/e/a/f/15137509091640585729cartoon-field-background.hi.png';\n\nlet pigImg = new Image();\npigImg.src = '../imgs/flying_pig_sprite.png';\n\nwindow.onload = function() {\n    \n    ctx1.drawImage(pigImg, 3, 80,87,88, 20, 50, 90, 90);\n    \n    let imgWidth = can0.width;\n\n    // the scroll speed \n    // an important thing to ensure here is that can.height \n    // is divisible by scrollSpeed \n    let scrollSpeed = -1;\n\n    // this is the primary animation loop that is called 60 times \n    // per second \n    function loop() {\n        // draw image 1 \n       \n        ctx0.drawImage(img, imgWidth, 0, 500, 450);\n\n        // draw image 2 \n        ctx0.drawImage(img, imgWidth - can0.width, 0, 500, 450);\n\n        // update image height \n        imgWidth += scrollSpeed;\n\n        // reseting the images when the first image entirely exits the screen \n        if (imgWidth == 0)\n            imgWidth = can0.width;\n\n        // this function creates a 60fps animation by scheduling a \n        // loop function call before the \n        // next redraw every time it is called \n        window.requestAnimationFrame(loop);\n    }\n\n    // this initiates the animation by calling the loop function \n    // for the first time \n    \n        \n    loop();\n}\n\n// let pigImage = new Image();\n// pigImage.src = 'https://1.bp.blogspot.com/-plicCbCeadY/V0lLJouE1kI/AAAAAAAAAkQ/xTZO2ne5SawJeX18wuYw827O17MKkgFTgCLcB/w800-h800/flyingpig.png';\n\n// function sprite(options) {\n\n//     let that = {};\n//     that.context = options.context;\n//     that.width = options.width;\n//     that.height = options.height;\n//     that.image = options.image;\n\n//     that.render = function () {\n//         console.log(that);\n//         that.context.drawImage(\n//             that.image,\n//             0,\n//             0,\n//             that.width,\n//             that.height,\n//             0,\n//             0,\n//             that.width,\n//             that.height\n//         );\n//     };\n\n//     return that;\n// }\n\n// let canvas = document.getElementById(\"canvas\");\n\n// let pig = sprite({\n//     context: canvas.getContext(\"2d\"),\n//     width: 20,\n//     height: 20,\n//     image: pigImage\n// });\n\n// pig.render();\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nclass Pig {\n    constructor(){\n        window.addEventListener('keydown',this.onKeyDown.bind(this));\n        window.addEventListener('keyup', this.onKeyUp.bind(this));\n        this.directionY = 0;\n        // this.keyCode = {32: -1}\n        this.posY = 175;\n    }\n\n    render() {\n        const pigImg = new Image();\n        pigImg.src = '../imgs/flying_pig_sprite.png';\n\n        const fgCan = document.getElementById('fgCanvas');\n        fgCan.width = 500;\n        fgCan.height = 450;\n        const fgCtx = fgCan.getContext('2d');\n        fgCtx.drawImage(pigImg, 3, 80, 87, 88, 30, this.posY, 80, 80);\n            \n        }\n\n    onKeyDown(key){\n        if (key.keyCode === 32) this.directionY = -1;\n    };\n\n    onKeyUp(key){\n        if(key.keyCode === 32) this.directionY = 1;\n    };\n    \n    update() {\n        if(this.posY === 0) {\n            this.posY += 1;\n        } else if (this.posY === 370){\n            this.posY -= 1;\n        } else {\n            this.posY += this.directionY;\n        }\n    }\n}\n\nmodule.exports = Pig;\n\n//# sourceURL=webpack:///./src/pig.js?");
 
 /***/ })
 

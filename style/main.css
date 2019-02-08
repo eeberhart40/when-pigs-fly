@@ -5,11 +5,7 @@ html {
     height: 100%;
 }
 
-#canvas0 {
-    /* background-image: url('http://www.clker.com/cliparts/6/e/a/f/15137509091640585729cartoon-field-background.hi.png');
-    background-size: cover; */
-    /* width: 500px;
-    height: 600px; */
+#bgCanvas {
     z-index: -1;
     padding: 0px;
     margin: auto;
@@ -24,7 +20,7 @@ html {
     border: 5px solid #fded00;
 }
 
-#canvas1 {
+#fgCanvas {
     z-index: 1;
     padding: 0px;
     margin: auto;
