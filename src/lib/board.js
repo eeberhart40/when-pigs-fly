@@ -1,4 +1,6 @@
-const Pig = require('./pig')
+const Pig = require('./pig');
+const ObstacleManager = require('./obstacleManager');
+const Obstacle = require('./obstacle');
 
 class Board {
     // contructor(pig, obstacles){
@@ -15,22 +17,37 @@ class Board {
         const bgCtx= bgCan.getContext('2d');
         let bgImgWidth = bgCan.width;
 
-        let scrollSpeed = -.5;
+        let scrollSpeed = -1;
 
         const pig = new Pig();
+        // const obstacle = new Obstacle(scrollSpeed);
+        const obstacleManager = new ObstacleManager(scrollSpeed);
         
         function loop() {
-
+            
+            // const obstacles = new ObstacleManager(scrollSpeed);
+            
             pig.render();
             pig.update();
+            obstacleManager.update();
+            
+            // obstacle.render();
+            // window.setInterval(function()
+            // {
+            //     obstacle.render();
+
+            // },1000);
+
 
             bgCtx.drawImage(bgImg, bgImgWidth, 0, bgCan.width, bgCan.height );
             bgCtx.drawImage(bgImg, bgImgWidth - bgCan.width, 0, bgCan.width, bgCan.height);
-
+            
             bgImgWidth += scrollSpeed;
 
-            if(bgImgWidth == 0) bgImgWidth = bgCan.width;
-
+            if(bgImgWidth == 0) {
+                bgImgWidth = bgCan.width;
+            }
+ 
             window.requestAnimationFrame(loop);
         }
 

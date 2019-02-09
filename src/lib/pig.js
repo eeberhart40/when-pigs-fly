@@ -7,6 +7,7 @@ class Pig {
         this.directionY = 0;
         // this.keyCode = {32: -1}
         this.posY = 175;
+  
     }
 
     render() {
@@ -22,17 +23,17 @@ class Pig {
         }
 
     onKeyDown(key){
-        if (key.keyCode === 32) this.directionY = -1;
+        if (key.keyCode === 32) this.directionY = -3;
     };
 
     onKeyUp(key){
-        if(key.keyCode === 32) this.directionY = 1;
+        if(key.keyCode === 32) this.directionY = 2;
     };
     
     update() {
-        if(this.posY === 0) {
+        if(this.posY <= 0) {
             this.posY += 1;
-        } else if (this.posY === 370){
+        } else if (this.posY >= 370){
             this.posY -= 1;
         } else {
             this.posY += this.directionY;

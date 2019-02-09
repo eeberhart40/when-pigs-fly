@@ -1,5 +1,5 @@
 
-const Board = require('./board');
+const Board = require('./lib/board');
 
 let board = new Board();
 
