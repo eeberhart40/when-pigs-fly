@@ -7,8 +7,8 @@ class Obstacle {
     constructor(scrollSpeed) {
         this.scrollSpeed = scrollSpeed;
         this.sprite = spriteFiles[Math.floor(Math.random() * spriteFiles.length)]
-        // this.yPos = 350;
-        // this.xPos = 450;
+        this.posX  = 350;
+        this.xPos = 450;
       
 
         if (this.sprite === 'horse') {

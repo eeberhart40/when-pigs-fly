@@ -4,9 +4,12 @@ class Pig {
     constructor(){
         window.addEventListener('keydown',this.onKeyDown.bind(this));
         window.addEventListener('keyup', this.onKeyUp.bind(this));
-        this.directionY = 0;
+        this.posX = 30;
         // this.keyCode = {32: -1}
         this.posY = 175;
+        this.directionY = 0;
+        this.width = 80;
+        this.height = 80;
   
     }
 
@@ -18,7 +21,7 @@ class Pig {
         fgCan.width = 500;
         fgCan.height = 450;
         const fgCtx = fgCan.getContext('2d');
-        fgCtx.drawImage(pigImg, 3, 80, 87, 88, 30, this.posY, 80, 80);
+        fgCtx.drawImage(pigImg, 3, 80, 87, 88, this.posX, this.posY, this.width, this.height);
             
         }
 

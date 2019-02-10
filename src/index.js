@@ -1,9 +1,14 @@
 
-const Board = require('./lib/board');
+// const Board = require('./lib/board');
 
-let board = new Board();
+// let board = new Board();
 
-board.render();
+// board.render();
+
+const Game = require('./lib/game');
+
+const game = new Game();
+game.play();
 
 
 

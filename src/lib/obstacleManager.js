@@ -5,10 +5,10 @@ class ObstacleManager{
         this.scrollSpeed = scrollSpeed;
         this.obstacleList = [];
         let that = this;
-        window.setInterval(function()
+        this.interval = window.setInterval(function()
         {
             this.obstacle = new Obstacle(scrollSpeed);
-            this.obstacle.render();
+            this.obstacle.render();   
 
             that.obstacleList.push(this.obstacle);
 
@@ -32,7 +32,7 @@ class ObstacleManager{
             obstacle.render();
             if (obstacle.spriteParams[4] < -100) {
                 // obstacle.destroy();
-                this.obstacleList.splice(0, 1);
+                this.obstacleList.splice(0, 1); 
                 // document.getElementById('fgCanvas').removeChild(obstacle);
             }
         })

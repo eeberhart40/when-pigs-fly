@@ -30,4 +30,7 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
+    font-family: 'Bangers', cursive;
+    color: Red;
+    font-size: 30px;
 }
