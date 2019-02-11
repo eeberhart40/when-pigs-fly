@@ -20,7 +20,7 @@ class Obstacle {
 
     render() {
         const obImg = new Image();
-        obImg.src = '../imgs/sprites/' + this.sprite + '.png';
+        obImg.src = './imgs/sprites/' + this.sprite + '.png';
 
         const fgCan = document.getElementById('fgCanvas');
    

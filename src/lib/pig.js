@@ -15,7 +15,7 @@ class Pig {
 
     render() {
         const pigImg = new Image();
-        pigImg.src = '../imgs/flying_pig_sprite.png';
+        pigImg.src = './imgs/flying_pig_sprite.png';
 
         const fgCan = document.getElementById('fgCanvas');
         fgCan.width = 500;

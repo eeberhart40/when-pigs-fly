@@ -102,7 +102,7 @@ class Board {
 
     gameOverRender(){
         const gameOverImg = new Image();
-        gameOverImg.src = '../imgs/gameOverPig.png';
+        gameOverImg.src = './imgs/gameOverPig.png';
 
         const gameOverCan = document.getElementById('fgCanvas');
 
@@ -110,10 +110,10 @@ class Board {
         gameOverCan.height = 450;
         const goCtx = gameOverCan.getContext('2d');
         goCtx.drawImage(gameOverImg, 0, 0, 809, 604, 0, 0, 500, 450);
-        
+
         goCtx.fillText("GAME OVER", 250, 200);
 
-                // window.clearInterval(this.obstacles.interval);
+        window.clearInterval(this.obstacles.interval);
     }
 }
 

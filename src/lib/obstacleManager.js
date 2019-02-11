@@ -11,6 +11,7 @@ class ObstacleManager{
             this.obstacle.render();   
 
             that.obstacleList.push(this.obstacle);
+            console.log('obstacle');
 
             // const obImg = new Image();
             // obImg.src = '../imgs/sprites/' + this.obstacle.sprite + '.png';
@@ -23,7 +24,7 @@ class ObstacleManager{
 
             // that.obstacleList.push(this.obstacle);
         }
-        , Math.random() * 5000);
+        , 3000);
     }
 
     update(){
