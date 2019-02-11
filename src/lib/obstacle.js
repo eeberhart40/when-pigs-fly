@@ -12,9 +12,9 @@ class Obstacle {
       
 
         if (this.sprite === 'horse') {
-            this.spriteParams = [65, 279, 63, 61, 500, 330, 120, 120];
+            this.spriteParams = [65, 279, 63, 61, 500, 330 - Math.floor(Math.random() * Math.floor(100)), 120, 120];
         } else if (this.sprite === 'blueBird') {
-            this.spriteParams = [0, 0, 200, 130, 500, 100, 50, 40];
+            this.spriteParams = [0, 0, 200, 130, 500, 250 - Math.floor(Math.random() * Math.floor(250)) , 50, 40];
         }
     }
 
