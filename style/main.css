@@ -5,6 +5,10 @@ html {
     height: 100%;
 }
 
+body {
+    font-family: 'Bangers', cursive;
+}
+
 #bgCanvas {
     z-index: -1;
     padding: 0px;
@@ -30,7 +34,13 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
-    font-family: 'Bangers', cursive;
     color: Red;
     font-size: 30px;
+}
+
+.game-title {
+    text-align: center;
+    font-size: 50px;
+    color: #edcccc;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
