@@ -5,13 +5,16 @@ class ObstacleManager{
         this.scrollSpeed = scrollSpeed;
         this.obstacleList = [];
         let that = this;
+        this.points = 0;
         this.interval = window.setInterval(function()
         {
             this.obstacle = new Obstacle(scrollSpeed);
             this.obstacle.render();   
 
+            that.points += 1;
             that.obstacleList.push(this.obstacle);
-            console.log('obstacle');
+            // that.points += 1;
+            // console.log(that.points);
 
             // const obImg = new Image();
             // obImg.src = '../imgs/sprites/' + this.obstacle.sprite + '.png';

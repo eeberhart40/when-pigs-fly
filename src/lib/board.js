@@ -10,7 +10,7 @@ class Board {
         this.obstacles = new ObstacleManager(scrollSpeed);
         this.collision = this.collision.bind(this);
         this.gameOverRender = this.gameOverRender.bind(this);
-
+        this.points = 0;
         this.gameOver = false;
     }
 
@@ -62,6 +62,8 @@ class Board {
         
         let that = this;
         function loop() {
+
+            that.points += 1;
             
             that.pig.render();
             that.pig.update();
@@ -93,30 +95,33 @@ class Board {
             let animationId = window.requestAnimationFrame(loop);
 
             if(that.gameOver) {
-                that.gameOverRender();
                 // window.cancelAnimationFrame(animationId);
+
+                that.gameOverRender(that.obstacles.points);
             }
         }
 
         loop();
     }
 
-    gameOverRender(){
+    gameOverRender(finalScore){
         const gameOverImg = new Image();
         gameOverImg.src = './imgs/gameOverPig.png';
 
         const gameOverCan = document.getElementById('fgCanvas');
-
+        
         gameOverCan.width = 500;
         gameOverCan.height = 450;
         const goCtx = gameOverCan.getContext('2d');
+        
         goCtx.drawImage(gameOverImg, 0, 0, 809, 604, 0, 0, 500, 450);
-
         goCtx.font = "50px Bangers, cursive";
-        goCtx.fillText("GAME OVER", 150, 225);
+        goCtx.fillText("GAME OVER", 150, 40);
+        goCtx.font = "50px Bangers, cursive";
+        goCtx.fillText(`final Score: ${finalScore}` , 120, 430);
         goCtx.font = "25px Bangers, cursive";
-        goCtx.fillText("press enter to play again", 120, 420);
-
+        goCtx.fillText("press enter to play again", 120, 450);
+        
 
         window.clearInterval(this.obstacles.interval);
     }

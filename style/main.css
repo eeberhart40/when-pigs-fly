@@ -44,6 +44,16 @@ body {
     color: #edcccc;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     min-width: 450px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+.creator { 
+    font-size: 25px;
 }
 
 .game-title p {
