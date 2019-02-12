@@ -4,6 +4,7 @@ const Obstacle = require('./obstacle');
 
 class Board {
     constructor(scrollSpeed = -1){
+        window.addEventListener('keydown', this.restart.bind(this));
         this.scrollSpeed = scrollSpeed;
         this.pig = new Pig();
         this.obstacles = new ObstacleManager(scrollSpeed);
@@ -111,10 +112,21 @@ class Board {
         const goCtx = gameOverCan.getContext('2d');
         goCtx.drawImage(gameOverImg, 0, 0, 809, 604, 0, 0, 500, 450);
 
-        goCtx.fillText("GAME OVER", 250, 200);
+        goCtx.font = "50px Bangers, cursive";
+        goCtx.fillText("GAME OVER", 150, 225);
+        goCtx.font = "25px Bangers, cursive";
+        goCtx.fillText("press enter to play again", 120, 420);
+
 
         window.clearInterval(this.obstacles.interval);
     }
+
+    restart(key){
+        if (this.gameOver) {
+            if(key.keyCode === 13) window.location.reload();
+        }
+    }
+
 }
 
 module.exports = Board;
