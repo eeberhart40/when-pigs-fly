@@ -33,10 +33,10 @@ class Board {
                 h: obstacle.spriteParams[7]
             };
 
-            if (pigSpace.x < obstacleSpace.x + obstacleSpace.w - 20 &&
-                pigSpace.x + pigSpace.w - 20 > obstacleSpace.x &&
-                pigSpace.y < obstacleSpace.y + obstacleSpace.h - 20 &&
-                pigSpace.y + pigSpace.h - 20> obstacleSpace.y) {
+            if (pigSpace.x < obstacleSpace.x + obstacleSpace.w - 35 &&
+                pigSpace.x + pigSpace.w - 35 > obstacleSpace.x &&
+                pigSpace.y < obstacleSpace.y + obstacleSpace.h - 35 &&
+                pigSpace.y + pigSpace.h - 35> obstacleSpace.y) {
                 this.gameOver = true;
             }
         });
