@@ -33,10 +33,10 @@ class Board {
                 h: obstacle.spriteParams[7]
             };
 
-            if (pigSpace.x < obstacleSpace.x + obstacleSpace.w &&
-                pigSpace.x + pigSpace.w > obstacleSpace.x &&
-                pigSpace.y < obstacleSpace.y + obstacleSpace.h &&
-                pigSpace.y + pigSpace.h > obstacleSpace.y) {
+            if (pigSpace.x < obstacleSpace.x + obstacleSpace.w - 10 &&
+                pigSpace.x + pigSpace.w - 10 > obstacleSpace.x &&
+                pigSpace.y < obstacleSpace.y + obstacleSpace.h - 10 &&
+                pigSpace.y + pigSpace.h -10 > obstacleSpace.y) {
   
                 this.gameOver = true;
             }
@@ -54,6 +54,8 @@ class Board {
         const bgCtx= bgCan.getContext('2d');
         let bgImgWidth = bgCan.width;
      
+        const fgCan = document.getElementById('fgCanvas');
+        const fgCtx = fgCan.getContext('2d');
         // let scrollSpeed = -1;
 
         // const pig = new Pig();
@@ -63,7 +65,7 @@ class Board {
         let that = this;
         function loop() {
 
-            that.points += 1;
+ 
             
             that.pig.render();
             that.pig.update();
@@ -91,6 +93,10 @@ class Board {
             if(bgImgWidth == 0) {
                 bgImgWidth = bgCan.width;
             }
+
+            fgCtx.font = "25px Bangers, cursive";
+            fgCtx.fillText(`Score: ${that.obstacles.points}`, 375, 25);
+            debugger
  
             let animationId = window.requestAnimationFrame(loop);
 
