@@ -33,11 +33,10 @@ class Board {
                 h: obstacle.spriteParams[7]
             };
 
-            if (pigSpace.x < obstacleSpace.x + obstacleSpace.w - 10 &&
-                pigSpace.x + pigSpace.w - 10 > obstacleSpace.x &&
-                pigSpace.y < obstacleSpace.y + obstacleSpace.h - 10 &&
-                pigSpace.y + pigSpace.h -10 > obstacleSpace.y) {
-  
+            if (pigSpace.x < obstacleSpace.x + obstacleSpace.w - 20 &&
+                pigSpace.x + pigSpace.w - 20 > obstacleSpace.x &&
+                pigSpace.y < obstacleSpace.y + obstacleSpace.h - 20 &&
+                pigSpace.y + pigSpace.h - 20> obstacleSpace.y) {
                 this.gameOver = true;
             }
         });
@@ -96,7 +95,6 @@ class Board {
 
             fgCtx.font = "25px Bangers, cursive";
             fgCtx.fillText(`Score: ${that.obstacles.points}`, 375, 25);
-            debugger
  
             let animationId = window.requestAnimationFrame(loop);
 
