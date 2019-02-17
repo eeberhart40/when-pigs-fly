@@ -14,7 +14,7 @@ body {
     padding: 0px;
     margin: auto;
     display: block;
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
@@ -45,11 +45,11 @@ body {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     min-width: 450px;
     display: block;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
-    
+    margin-bottom: 10px;
 }
 
 .creator { 
@@ -58,4 +58,13 @@ body {
 
 .game-title p {
     font-size: 18px;
+}
+
+.canvas-container {
+    padding-top: 5px;
+    position: relative;
+    /* top: 100px;
+    left: 0px; */
+    height: 100%;
+    width: 100%;
 }
