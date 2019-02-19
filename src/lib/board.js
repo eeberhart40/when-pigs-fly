@@ -48,8 +48,8 @@ class Board {
         bgImg.src = 'http://www.clker.com/cliparts/6/e/a/f/15137509091640585729cartoon-field-background.hi.png';
         
         const bgCan = document.getElementById('bgCanvas');
-        bgCan.width = 500;
         bgCan.height = 450;
+        bgCan.width = 500;
         const bgCtx= bgCan.getContext('2d');
         let bgImgWidth = bgCan.width;
      
@@ -65,7 +65,8 @@ class Board {
         function loop() {
 
  
-            
+        
+
             that.pig.render();
             that.pig.update();
             that.obstacles.update();
@@ -94,7 +95,7 @@ class Board {
             }
 
             fgCtx.font = "25px Bangers, cursive";
-            fgCtx.fillText(`Score: ${that.obstacles.points}`, 375, 25);
+            fgCtx.fillText(`Score: ${that.obstacles.points}`, 210, 25);
  
             let animationId = window.requestAnimationFrame(loop);
 
