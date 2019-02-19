@@ -79,7 +79,6 @@ body {
 .border {
     width: 300px;
     margin: 20px;
-    background-color: red;
 }
 
 .links-container {
@@ -116,5 +115,21 @@ body {
 }
 
 #strive {
-    background-image: url("http://cdn.onlinewebfonts.com/svg/img_23001.png");
+    background-image: url("https://image.flaticon.com/icons/png/512/38/38667.png");
 }
+
+/* footer {
+    background-color: blue;
+    height: 100px;
+}
+
+.bottom {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#space {
+
+} */
