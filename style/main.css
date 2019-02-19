@@ -34,7 +34,6 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    color: Red;
     font-size: 30px;
 }
 
@@ -50,10 +49,16 @@ body {
     left: 0;
     right: 0;
     margin-bottom: 10px;
+    min-width: 910px;
 }
 
 .creator { 
     font-size: 25px;
+}
+
+.creator a {
+    text-decoration: none;
+    color: #edcccc;
 }
 
 .game-title p {
@@ -67,4 +72,49 @@ body {
     left: 0px; */
     height: 100%;
     width: 100%;
+    display: flex;
+    min-width: 910px;
+}
+
+.border {
+    width: 300px;
+    margin: 20px;
+    background-color: red;
+}
+
+.links-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#links-list {
+    /* width: 100%;
+    height: 100%; */
+    list-style: none;
+}
+
+.link {
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    background-size: cover;
+    border-radius: 5px;
+} 
+
+#linkedIn {
+    background-image: url("https://image.flaticon.com/icons/svg/61/61109.svg");
+}
+
+#github {
+    background-image: url("https://image.flaticon.com/icons/png/512/25/25231.png");
+}
+
+#angelList {
+    background-image: url("https://icons-for-free.com/free-icons/png/512/1181192.png");
+}
+
+#strive {
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_23001.png");
 }
