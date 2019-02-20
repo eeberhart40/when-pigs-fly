@@ -169,6 +169,7 @@ body, input {
     background-color: #faaaab;
     border: 3px solid #fded00;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 input {
