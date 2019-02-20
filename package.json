@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/eeberhart40/when-pigs-fly#readme",
   "dependencies": {
+    "firebase": "^5.8.3",
     "lodash": "^4.17.11",
     "webpack": "^4.29.2",
     "webpack-cli": "^3.2.3"

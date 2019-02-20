@@ -48,7 +48,7 @@ class Board {
         bgImg.src = 'http://www.clker.com/cliparts/6/e/a/f/15137509091640585729cartoon-field-background.hi.png';
         
         const bgCan = document.getElementById('bgCanvas');
-        bgCan.height = 446;
+        bgCan.height = 445;
         bgCan.width = 500;
         const bgCtx= bgCan.getContext('2d');
         let bgImgWidth = bgCan.width;
@@ -104,6 +104,9 @@ class Board {
                 // window.cancelAnimationFrame(animationId);
 
                 that.gameOverRender(that.obstacles.points);
+                // // if()
+                // let form = document.getElementById('high-score-form');
+                // form.hidden = false;
             }
         }
 
@@ -137,6 +140,8 @@ class Board {
             if(key.keyCode === 13) window.location.reload();
         }
     }
+
+
 
 }
 
