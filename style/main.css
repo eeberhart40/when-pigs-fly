@@ -181,3 +181,13 @@ input {
     text-decoration: underline;
     margin: 0px;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#music-btn{
+    height: 30px;
+    width: 100px;
+}

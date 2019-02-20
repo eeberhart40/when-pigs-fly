@@ -16,6 +16,9 @@ class Board {
         this.gameOver = false;
         this.scoreForm = new ScoreForm();
         this.topScores = new TopScores();
+        this.music = true;
+        this.musicButton = document.getElementById('music-btn');
+        this.audioTag = document.getElementById('audio');
     }
 
     collision() {
