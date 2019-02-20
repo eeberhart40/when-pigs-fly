@@ -40,4 +40,4 @@ class Obstacle {
 
 }
 
-module.exports = Obstacle;  
+export default Obstacle;

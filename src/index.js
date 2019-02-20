@@ -5,7 +5,7 @@
 
 // board.render();
 
-const Game = require('./lib/game');
+import Game from './lib/game';
 
 const game = new Game();
 game.play();

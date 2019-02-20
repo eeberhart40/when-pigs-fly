@@ -1,4 +1,4 @@
-const Obstacle = require('./obstacle');
+import Obstacle from './obstacle';
 
 class ObstacleManager{
     constructor(scrollSpeed){
@@ -43,4 +43,4 @@ class ObstacleManager{
     }
 }
 
-module.exports = ObstacleManager;
+export default ObstacleManager;

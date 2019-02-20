@@ -1,6 +1,8 @@
-const Pig = require('./pig');
-const ObstacleManager = require('./obstacleManager');
-const Obstacle = require('./obstacle');
+import Pig from './pig';
+import ObstacleManager from './obstacleManager';
+// const Obstacle = require('./obstacle');
+import ScoreForm from './scoreForm';
+import TopScores from './topScores';
 
 class Board {
     constructor(scrollSpeed = -1){
@@ -12,6 +14,8 @@ class Board {
         this.gameOverRender = this.gameOverRender.bind(this);
         this.points = 0;
         this.gameOver = false;
+        this.scoreForm = new ScoreForm();
+        this.topScores = new TopScores();
     }
 
     collision() {
@@ -44,6 +48,10 @@ class Board {
     }
 
     render () {
+
+        this.topScores.getScores();
+        // this.topScores.renderTopScores();
+        
         const bgImg = new Image();
         bgImg.src = 'http://www.clker.com/cliparts/6/e/a/f/15137509091640585729cartoon-field-background.hi.png';
         
@@ -104,9 +112,7 @@ class Board {
                 // window.cancelAnimationFrame(animationId);
 
                 that.gameOverRender(that.obstacles.points);
-                // // if()
-                // let form = document.getElementById('high-score-form');
-                // form.hidden = false;
+     
             }
         }
 
@@ -131,8 +137,9 @@ class Board {
         goCtx.font = "25px Bangers, cursive";
         goCtx.fillText("press enter to play again", 120, 450);
         
-
         window.clearInterval(this.obstacles.interval);
+
+        this.scoreForm.getScore(finalScore);
     }
 
     restart(key){
@@ -145,4 +152,4 @@ class Board {
 
 }
 
-module.exports = Board;
+export default Board;

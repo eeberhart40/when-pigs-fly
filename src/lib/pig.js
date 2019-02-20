@@ -44,4 +44,4 @@ class Pig {
     }
 }
 
-module.exports = Pig;
+export default Pig;

@@ -1,9 +1,7 @@
 import { postScore } from './highScore';
 
 class ScoreForm {
-    constructor(props){
-        super(props);
-
+    constructor(){
         // this.points = points;
         this.form = document.getElementById("high-score-form");
         this.nameInput = document.getElementById("name-input");
@@ -24,12 +22,11 @@ class ScoreForm {
                 this.nameInput.value = "";
                 this.nameInput.disabled = true;
                 this.nameInput.placeholder = "Score submitted";
-
-                window.setTimeout(this.form.classList.add('hidden'), 2000);
+                this.form.style.display = 'none';
             }
         })
     }
 
 }
 
-module.exports = ScoreForm;
+export default ScoreForm;
