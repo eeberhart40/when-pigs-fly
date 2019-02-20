@@ -43,7 +43,7 @@ class Game {
                     gameOverCan.width = 500;
                     gameOverCan.height = 450;
                     const goCtx = gameOverCan.getContext('2d');
-                    debugger
+                    
                     goCtx.drawImage(gameOverImg, 0, 0, 809, 604, 0, 0, 500, 450);
                 }
         });

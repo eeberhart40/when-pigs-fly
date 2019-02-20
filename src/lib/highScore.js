@@ -14,7 +14,6 @@ const fb = firebase.initializeApp(config);
 const highScores = fb.firestore().collection("highScores");
 
 export const postScore = (name, points) => {
-    debugger
     highScores.add({
         name,
         points
