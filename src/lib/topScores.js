@@ -11,7 +11,6 @@ class TopScores {
 
     getScores(){
         fetchHighScores().then(scores => {
-            debugger
             scores.forEach(score => {
               this.topScores.push(score.data());
             });

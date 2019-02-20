@@ -3,6 +3,7 @@ import ObstacleManager from './obstacleManager';
 // const Obstacle = require('./obstacle');
 import ScoreForm from './scoreForm';
 import TopScores from './topScores';
+import MusicButton from './music';
 
 class Board {
     constructor(scrollSpeed = -1){
@@ -17,8 +18,8 @@ class Board {
         this.scoreForm = new ScoreForm();
         this.topScores = new TopScores();
         this.music = true;
-        this.musicButton = document.getElementById('music-btn');
-        this.audioTag = document.getElementById('audio');
+        this.MusicButton = new MusicButton();
+        this.MusicButton.setup();
     }
 
     collision() {

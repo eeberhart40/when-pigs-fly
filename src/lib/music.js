@@ -7,7 +7,6 @@ class MusicButton {
     }
 
     setup(){
-        this.audio.play();
 
         this.button.addEventListener("click", (e) => {
             e.preventDefault();
