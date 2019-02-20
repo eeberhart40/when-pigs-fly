@@ -5,7 +5,7 @@ html {
     height: 100%;
 }
 
-body {
+body, input {
     font-family: 'Bangers', cursive;
 }
 
@@ -75,7 +75,7 @@ body {
     height: 100%;
     width: 100%;
     display: flex;
-    min-width: 910px;
+    min-width: 970px;
 }
 
 .border {
@@ -120,34 +120,21 @@ body {
     background-image: url("https://image.flaticon.com/icons/png/512/38/38667.png");
 }
 
-/* footer {
-    background-color: blue;
-    height: 100px;
-}
-
-.bottom {
-    margin: auto;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-#space {
-
-} */
 
 #high-score-form {
     margin: auto;
     width: 300px;
-    height: 300px;
-    background: red;
+    height: 215px;
+    background: #29b6ff;
     z-index: 30;
     position: absolute;
     top: 21%;
-    left: 36%;
+    left: 42%;
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .hidden {
@@ -155,13 +142,41 @@ body {
 }
 
 .scoreboard {
+    font-size: 23px;
     border-radius: 5px;
-    height: 300px;
+    height: 340px;
     background-color: #fded00;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
 }
 
 #top-scores {
     list-style-type: none;
+}
+
+#name-input{
+    height: 50px;
+    width: 200px;
+    border: 3px solid #fded00;
+    border-radius: 5px;
+}
+
+#high-score-submit {
+    width: 150px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #faaaab;
+    border: 3px solid #fded00;
+    margin-top: 5px;
+}
+
+input {
+    font-size: 20px;
+}
+
+#scores {
+    text-align: center;
+    text-decoration: underline;
+    margin: 0px;
 }

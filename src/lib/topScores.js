@@ -31,7 +31,7 @@ class TopScores {
 
         this.topScores.forEach((entry, idx) => {
             let scoreLi = document.createElement('li');
-            scoreLi.innerText = `${idx}: ${entry.name}- ${entry.points}`;
+            scoreLi.innerText = `${idx + 1}: ${entry.name}, ${entry.points}`;
             this.topScoresList.appendChild(scoreLi);
 
         })
