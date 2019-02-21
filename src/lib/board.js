@@ -107,7 +107,7 @@ class Board {
             }
 
             fgCtx.font = "25px Bangers, cursive";
-            fgCtx.fillText(`Spacebar Controls Pig!`, 150, 25);
+            fgCtx.fillText(`Up Arrow Controls Pig!`, 150, 25);
             fgCtx.fillText(`Score: ${that.obstacles.points}`, 210, 50);
  
             let animationId = window.requestAnimationFrame(loop);

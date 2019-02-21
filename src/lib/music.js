@@ -7,7 +7,6 @@ class MusicButton {
     }
 
     setup(){
-
         this.button.addEventListener("click", (e) => {
             e.preventDefault();
             this.toggleMusic();

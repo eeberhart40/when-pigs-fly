@@ -26,14 +26,21 @@ class Pig {
         }
 
     onKeyDown(key){
-        if (key.keyCode === 32) this.directionY = -3;
+        if (key.keyCode === 38) {
+            this.directionY = -3;
+            return false;
+        }
     };
 
     onKeyUp(key){
-        if(key.keyCode === 32) this.directionY = 2;
+        if(key.keyCode === 38) {
+            this.directionY = 2;
+            return false;
+        }
     };
     
     update() {
+
         if(this.posY <= 0) {
             this.posY += 1;
         } else if (this.posY >= 370){

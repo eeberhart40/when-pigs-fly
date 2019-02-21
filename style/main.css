@@ -197,3 +197,7 @@ footer {
     border: none;
     border-radius: 3px;
 }
+
+#music-btn:focus {
+    outline: none;
+}
