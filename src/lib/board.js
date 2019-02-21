@@ -6,7 +6,7 @@ import TopScores from './topScores';
 import MusicButton from './music';
 
 class Board {
-    constructor(scrollSpeed = -5){
+    constructor(scrollSpeed = -6){
         window.addEventListener('keydown', this.restart.bind(this));
         this.scrollSpeed = scrollSpeed;
         this.pig = new Pig();
