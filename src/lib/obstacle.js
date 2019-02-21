@@ -23,7 +23,6 @@ class Obstacle {
         this.posX  = 350;
         this.xPos = 450;
       
-        debugger
         if (this.spriteCategory.includes('horse')) {
             if( this.sprite === 'horse'){
                 this.spriteParams = [65, 279, 63, 61, 500, 300 - Math.floor(Math.random() * Math.floor(100)), 200, 200];
