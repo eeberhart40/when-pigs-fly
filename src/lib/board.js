@@ -6,7 +6,7 @@ import TopScores from './topScores';
 import MusicButton from './music';
 
 class Board {
-    constructor(scrollSpeed = -1){
+    constructor(scrollSpeed = -5){
         window.addEventListener('keydown', this.restart.bind(this));
         this.scrollSpeed = scrollSpeed;
         this.pig = new Pig();
@@ -102,7 +102,7 @@ class Board {
             
             bgImgWidth += that.scrollSpeed;
 
-            if(bgImgWidth == 0) {
+            if(bgImgWidth <= 0) {
                 bgImgWidth = bgCan.width;
             }
 

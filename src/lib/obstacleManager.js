@@ -27,7 +27,7 @@ class ObstacleManager{
 
             // that.obstacleList.push(this.obstacle);
         }
-        , 3000);
+        , 750);
     }
 
     update(){
