@@ -18,12 +18,10 @@ class TopScores {
             this.renderTopScores();
         });
 
-        // debugger
-        // // this.loaded = true;
     }
 
     renderTopScores(){
-        // debugger
+     
         if(this.topScores.length === 0){
             this.scoreBoard.innerText = "NO HIGHSCORES YET";
         }

@@ -4,7 +4,7 @@ let spriteFiles = [
 ]
 
 let airSpriteFiles = [
-    'blueBird', 'chicken', 'blueBird', 'chicken', 'pterodactyl', 'bat', 'pterodactyl', 'blueBird', 'bat', 'blueBird'
+    'blueBird', 'chicken', 'blueBird', 'chicken', 'pterodactyl', 'bat', 'blueBird', 'blueBird', 'bat', 'blueBird'
 ];
 
 let groundSpriteFiles = [
@@ -33,7 +33,7 @@ class Obstacle {
             } else if (this.sprite === 'cow') {
                 this.spriteParams = [280, 174, 68, 42, 500, 300 - Math.floor(Math.random() * Math.floor(100)), 200, 150];
             } else if (this.sprite === 'Tyrantrum') {
-                this.spriteParams = [0, 97, 1200, 1006, 500, 200 - Math.floor(Math.random() * Math.floor(100)), 300, 400];
+                this.spriteParams = [0, 97, 1200, 1006, 500, Math.floor(Math.random() * Math.floor(100)), 300, 400];
             } else if (this.sprite === 'whiteTiger') {
                 this.spriteParams = [868, 125, 148, 76, 500, 300 - Math.floor(Math.random() * Math.floor(100)), 200, 110];
             }
@@ -46,7 +46,7 @@ class Obstacle {
             } else if (this.sprite === 'bat') {
                 this.spriteParams = [482, 14, 151, 57, 500,  Math.floor(Math.random() * Math.floor(250)), 150, 60];
             } else if (this.sprite === 'pterodactyl') {
-                this.spriteParams = [74, 49, 63, 43, 500,  Math.floor(Math.random() * Math.floor(250)), 200, 120];
+                this.spriteParams = [74, 49, 63, 43, 500,  Math.floor(Math.random() * Math.floor(250)), 300, 180];
             }
         }
     }

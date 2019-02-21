@@ -67,36 +67,15 @@ class Board {
      
         const fgCan = document.getElementById('fgCanvas');
         const fgCtx = fgCan.getContext('2d');
-        // let scrollSpeed = -1;
-
-        // const pig = new Pig();
-        // // const obstacle = new Obstacle(scrollSpeed);
-        // const obstacleManager = new ObstacleManager(scrollSpeed);
         
         let that = this;
         function loop() {
-
- 
-        
 
             that.pig.render();
             that.pig.update();
             that.obstacles.update();
             that.collision();
-            // const obstacles = new ObstacleManager(scrollSpeed);
-            
-            // pig.render();
-            // pig.update();
-            // obstacleManager.update();
-            
-            // obstacle.render();
-            // window.setInterval(function()
-            // {
-            //     obstacle.render();
-
-            // },1000);
-
-
+  
             bgCtx.drawImage(bgImg, bgImgWidth, 0, bgCan.width, bgCan.height );
             bgCtx.drawImage(bgImg, bgImgWidth - bgCan.width, 0, bgCan.width, bgCan.height);
             
@@ -113,8 +92,7 @@ class Board {
             let animationId = window.requestAnimationFrame(loop);
 
             if(that.gameOver) {
-                // window.cancelAnimationFrame(animationId);
-
+  
                 that.gameOverRender(that.obstacles.points);
      
             }
