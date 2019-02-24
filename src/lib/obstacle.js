@@ -33,7 +33,7 @@ class Obstacle {
             } else if (this.sprite === 'cow') {
                 this.spriteParams = [280, 174, 68, 42, 500, 300 - Math.floor(Math.random() * Math.floor(100)), 200, 150];
             } else if (this.sprite === 'Tyrantrum') {
-                this.spriteParams = [0, 97, 1200, 1006, 500, Math.floor(Math.random() * Math.floor(100)), 300, 400];
+                this.spriteParams = [0, 97, 1200, 1006, 500, Math.floor(Math.random() * Math.floor(100)), 220, 300];
             } else if (this.sprite === 'whiteTiger') {
                 this.spriteParams = [868, 125, 148, 76, 500, 300 - Math.floor(Math.random() * Math.floor(100)), 200, 110];
             }

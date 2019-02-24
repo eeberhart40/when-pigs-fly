@@ -97,8 +97,8 @@ body, input, button {
 
 .link {
     box-sizing: border-box;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     margin: 5px;
     background-size: cover;
     border-radius: 5px;
@@ -117,7 +117,12 @@ body, input, button {
 }
 
 #strive {
-    background-image: url("https://expeditions.mountainguides.is/wp-content/uploads/2014/12/iflm-logo-f-favicon2.png");
+    background-image: url("https://www.shareicon.net/data/512x512/2015/11/10/669928_running_512x512.png");
+}
+
+#personal-site {
+    background-image: url("https://www.favicon.cc/logo3d/491350.png");
+    height: 90px;
 }
 
 
