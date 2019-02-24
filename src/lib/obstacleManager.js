@@ -34,7 +34,7 @@ class ObstacleManager{
         this.obstacleList.forEach(obstacle => {
             obstacle.spriteParams[4] += this.scrollSpeed;
             obstacle.render();
-            if (obstacle.spriteParams[4] < -100) {
+            if (obstacle.spriteParams[4] < -300) {
                 // obstacle.destroy();
                 this.obstacleList.splice(0, 1); 
                 // document.getElementById('fgCanvas').removeChild(obstacle);
