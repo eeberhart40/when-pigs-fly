@@ -13,19 +13,6 @@ class ObstacleManager{
 
             that.points += 1;
             that.obstacleList.push(this.obstacle);
-            // that.points += 1;
-            // console.log(that.points);
-
-            // const obImg = new Image();
-            // obImg.src = '../imgs/sprites/' + this.obstacle.sprite + '.png';
-
-            // const fgCan = document.getElementById('fgCanvas');
-
-            // const fgCtx = fgCan.getContext('2d');
-            // debugger
-            // fgCtx.drawImage(obImg, ...this.obstacle.spriteParams);
-
-            // that.obstacleList.push(this.obstacle);
         }
         , 1000);
     }
@@ -35,9 +22,7 @@ class ObstacleManager{
             obstacle.spriteParams[4] += this.scrollSpeed;
             obstacle.render();
             if (obstacle.spriteParams[4] < -300) {
-                // obstacle.destroy();
                 this.obstacleList.splice(0, 1); 
-                // document.getElementById('fgCanvas').removeChild(obstacle);
             }
         })
     }
