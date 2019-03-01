@@ -17,7 +17,7 @@
 
 ## Implementation
 ### Game play 
-The game starts out with the pig character flying in the middle of the screen. Other animals being to appear every second. With Each new animal generated the user gains a point.
+The game starts out with the pig character flying in the middle of the screen. Other animals begin to appear every second. With each new animal generated the user gains a point.
 
 <img src="./imgs/pigFlight.png" width="600">
 
@@ -139,7 +139,7 @@ In order to ensure that a user would see the top scores list update if they brok
     }
 ```
 
-##Planned Future Features
+## Planned Future Features
 * Extra points for grabbing apples
 * Boosting abilities for pig
 * Pig shoots lasers to destroy obstacles!
