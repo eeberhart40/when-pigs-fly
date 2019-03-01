@@ -19,11 +19,11 @@
 ### Game play 
 The game starts out with the pig character flying in the middle of the screen. Other animals being to appear every second. With Each new animal generated the user gains a point.
 
-<img src="./imgs/pigFlight.png" width="500">
+<img src="./imgs/pigFlight.png" width="600">
 
 Pressing the `up` key causes the pig to ascend. Releasing the key causes the pig to float towards the bottom of the screen. The pig is bounded by the borders of the screen.
 
-<img src="./imgs/obstacles.png" width="500">
+<img src="./imgs/obstacles.png" width="600">
 
 If the pig collides with another animal the game ends and a modal prompts the user to enter their name.
 
@@ -35,13 +35,13 @@ Upon submitting their score, the list of top scores updates and if the user has 
 
 The game over screen prompts the user to press enter/return to play again.
 
-<img src="./imgs/game_over.png" width="500">
+<img src="./imgs/game_over.png" width="300">
 
 
 ## Collision Logic
 Every animal character is taken from sprite sheets with backgrounds that are invisible when drawn on a canvas. The animals are grabbed as rectangles with dimensions just large enough to fully encompass them. This means that the effective space each animal occupies in the game is that of the rectangle encompassing them, although they appear to take up less space when drawn on the game canvas.
 
-<img src="./imgs/spriteDemo.png" width="300">
+<img src="./imgs/spriteDemo.png" width="600">
 
 In the game, collision occurs when the rectangle encompassing the pig bumps into or overlaps with that of another animal. To account for the extra space I allowed for "wiggle room" of 30%. 
 
