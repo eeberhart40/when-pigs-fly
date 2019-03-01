@@ -70,12 +70,10 @@ body, input, button {
 .canvas-container {
     padding-top: 5px;
     position: relative;
-    /* top: 100px;
-    left: 0px; */
     height: 100%;
     width: 100%;
     display: flex;
-    min-width: 970px;
+    min-width: 1080px;
 }
 
 .border {
@@ -205,4 +203,9 @@ footer {
 
 #music-btn:focus {
     outline: none;
+}
+
+ul li {
+    white-space: nowrap;
+    overflow: hidden;
 }
