@@ -22,6 +22,7 @@ class Pig {
         fgCan.height = 450;
         const fgCtx = fgCan.getContext('2d');
         fgCtx.drawImage(pigImg, 3, 80, 87, 88, this.posX, this.posY, this.width, this.height);
+        // fgCtx.drawImage(pigImg, 3, 80, 87, 88, this.posX, this.posY, this.width, this.height);
             
         }
 

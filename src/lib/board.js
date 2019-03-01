@@ -40,10 +40,13 @@ class Board {
                 h: obstacle.spriteParams[7]
             };
 
-            if (pigSpace.x < obstacleSpace.x + obstacleSpace.w - 35 &&
-                pigSpace.x + pigSpace.w - 35 > obstacleSpace.x &&
-                pigSpace.y < obstacleSpace.y + obstacleSpace.h - 35 &&
-                pigSpace.y + pigSpace.h - 35> obstacleSpace.y) {
+            let widthWiggle = Math.floor(obstacleSpace.w * 0.3)
+            let heightWiggle = Math.floor(obstacleSpace.h * 0.3)
+
+            if (pigSpace.x < obstacleSpace.x + obstacleSpace.w - widthWiggle &&
+                pigSpace.x + pigSpace.w - widthWiggle > obstacleSpace.x &&
+                pigSpace.y < obstacleSpace.y + obstacleSpace.h - heightWiggle &&
+                pigSpace.y + pigSpace.h - heightWiggle > obstacleSpace.y) {
                 this.gameOver = true;
             }
         });
