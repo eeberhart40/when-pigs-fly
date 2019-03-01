@@ -19,11 +19,11 @@
 ### Game play 
 The game starts out with the pig character flying in the middle of the screen. Other animals being to appear every second. With Each new animal generated the user gains a point.
 
-<img src="./imgs/pigFlight.png" width="300">
+<img src="./imgs/pigFlight.png" width="500">
 
 Pressing the `up` key causes the pig to ascend. Releasing the key causes the pig to float towards the bottom of the screen. The pig is bounded by the borders of the screen.
 
-<img src="./imgs/obstacles.png" width="300">
+<img src="./imgs/obstacles.png" width="500">
 
 If the pig collides with another animal the game ends and a modal prompts the user to enter their name.
 
@@ -35,7 +35,7 @@ Upon submitting their score, the list of top scores updates and if the user has 
 
 The game over screen prompts the user to press enter/return to play again.
 
-<img src="./imgs/game_over.png" width="300">
+<img src="./imgs/game_over.png" width="500">
 
 
 ## Collision Logic
