@@ -44,14 +44,13 @@ body, input, button {
     font-size: 50px;
     color: #edcccc;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    min-width: 450px;
+    min-width: 1080px;
     display: block;
     position: relative;
     top: 0;
     left: 0;
     right: 0;
     margin-bottom: 10px;
-    min-width: 910px;
 }
 
 .creator { 
@@ -188,7 +187,7 @@ input {
 footer {
     display: flex;
     justify-content: center;
-    min-width: 910px;
+    min-width: 1080px;
 }
 
 #music-btn{

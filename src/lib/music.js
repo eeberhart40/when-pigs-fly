@@ -17,6 +17,10 @@ class MusicButton {
     toggleMusic(){
         return this.audio.paused ? this.audio.play() : this.audio.pause();
     }
+
+    carryOver() {
+        return this.audio.play() ? this.audio.play() : this.audio.pause();
+    }
 }
 
 export default MusicButton;

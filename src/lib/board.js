@@ -126,9 +126,6 @@ class Board {
             if(key.keyCode === 13) window.location.reload();
         }
     }
-
-
-
 }
 
 export default Board;
