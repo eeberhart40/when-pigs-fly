@@ -1349,7 +1349,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\nclass MusicButton {\n    constructor(){\n        this.button = document.getElementById(\"music-btn\");\n        this.audio = document.getElementById(\"audio\");\n        this.toggleMusic = this.toggleMusic.bind(this);\n    }\n\n    setup(){\n        this.button.addEventListener(\"click\", (e) => {\n            e.preventDefault();\n            this.toggleMusic();\n        });\n    }\n\n    toggleMusic(){\n        return this.audio.paused ? this.audio.play() : this.audio.pause();\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MusicButton);\n\n//# sourceURL=webpack:///./src/lib/music.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\nclass MusicButton {\n    constructor(){\n        this.button = document.getElementById(\"music-btn\");\n        this.audio = document.getElementById(\"audio\");\n        this.toggleMusic = this.toggleMusic.bind(this);\n    }\n\n    setup(){\n        this.button.addEventListener(\"click\", (e) => {\n            e.preventDefault();\n            this.toggleMusic();\n        });\n        this.audio.pause();\n    }\n\n    toggleMusic(){\n        return this.audio.paused ? this.audio.play() : this.audio.pause();\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MusicButton);\n\n//# sourceURL=webpack:///./src/lib/music.js?");
 
 /***/ }),
 

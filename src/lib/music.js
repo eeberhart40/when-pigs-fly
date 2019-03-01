@@ -11,6 +11,7 @@ class MusicButton {
             e.preventDefault();
             this.toggleMusic();
         });
+        this.audio.pause();
     }
 
     toggleMusic(){
