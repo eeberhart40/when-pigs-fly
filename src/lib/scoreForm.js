@@ -1,10 +1,12 @@
 import { postScore } from './highScore';
+import TopScores from './topScores';
 
 class ScoreForm {
     constructor(){
         // this.points = points;
         this.form = document.getElementById("high-score-form");
         this.nameInput = document.getElementById("name-input");
+        this.topScores = new TopScores();
     }
 
     getScore(points){
@@ -19,6 +21,7 @@ class ScoreForm {
             e.preventDefault();
             if(this.nameInput.value !== "") {
                 postScore(this.nameInput.value, points);
+                this.topScores.updateScores();
                 this.nameInput.value = "";
                 this.nameInput.disabled = true;
                 this.nameInput.placeholder = "Score submitted";

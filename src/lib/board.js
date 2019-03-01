@@ -1,6 +1,5 @@
 import Pig from './pig';
 import ObstacleManager from './obstacleManager';
-// const Obstacle = require('./obstacle');
 import ScoreForm from './scoreForm';
 import TopScores from './topScores';
 import MusicButton from './music';
@@ -53,9 +52,7 @@ class Board {
 
     render () {
 
-        this.topScores.getScores();
-        // this.topScores.renderTopScores();
-        
+        this.topScores.getScores();        
         const bgImg = new Image();
         bgImg.src = 'http://www.clker.com/cliparts/6/e/a/f/15137509091640585729cartoon-field-background.hi.png';
         

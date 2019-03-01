@@ -7,6 +7,7 @@ class TopScores {
         this.scoreBoard = document.getElementById("top-scores-container");
         // this.loaded = false;
         this.renderTopScores = this.renderTopScores.bind(this);
+        this.getScores = this.getScores.bind(this);
     }
 
     getScores(){
@@ -35,6 +36,13 @@ class TopScores {
     }
 
 
+    updateScores() {
+        while (this.topScoresList.firstChild) {
+            this.topScoresList.removeChild(this.topScoresList.firstChild);
+        }
+
+        this.getScores();
+    }
 }
 
 export default TopScores;
