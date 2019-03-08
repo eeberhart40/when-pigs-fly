@@ -3,6 +3,7 @@ class MusicButton {
     constructor(){
         this.button = document.getElementById("music-btn");
         this.audio = document.getElementById("audio");
+        this.audio.volume = 0.3;
         this.toggleMusic = this.toggleMusic.bind(this);
     }
 
@@ -11,16 +12,13 @@ class MusicButton {
             e.preventDefault();
             this.toggleMusic();
         });
-        this.audio.pause();
+        this.audio.play();
     }
 
     toggleMusic(){
         return this.audio.paused ? this.audio.play() : this.audio.pause();
     }
 
-    carryOver() {
-        return this.audio.play() ? this.audio.play() : this.audio.pause();
-    }
 }
 
 export default MusicButton;

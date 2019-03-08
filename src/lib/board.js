@@ -19,6 +19,7 @@ class Board {
         this.music = true;
         this.MusicButton = new MusicButton();
         this.MusicButton.setup();
+
     }
 
     collision() {
